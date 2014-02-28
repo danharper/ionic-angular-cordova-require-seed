@@ -5,7 +5,7 @@
 */
 require.config({
     paths: {
-        cordova: '../cordova',
+        // cordova: '../cordova',
         angular: '../lib/js/angular/angular',
         angularAnimate: '../lib/js/angular/angular-animate',
         angularTouch: '../lib/js/angular/angular-touch',
@@ -30,12 +30,13 @@ require.config({
 });
 
 require( [
-    'cordova',
+    // 'cordova',
     'ionic',
     'angular',
-    'app'], function(cordova, ionic, angular, app) {
+    'app'], function(/*cordova, */ionic, angular, app) {
     'use strict';
 
+    var device = false
     var start  = function(){
         angular.bootstrap(document, [app['name']]);
     }
